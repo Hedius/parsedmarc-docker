@@ -17,8 +17,7 @@ RUN apt-get update \
         gir1.2-secret-1
 RUN pip install -U parsedmarc
 RUN apt-get purge --yes gcc && apt autoremove --yes && apt-get clean \
-    && rm -Rf /var/lib/{apt,dpkg}/ && rm -Rf /root/.cache/ \
-    && chmod +x /start.sh
+    && rm -Rf /var/lib/{apt,dpkg}/ && rm -Rf /root/.cache/
 
 USER pythonRun:pythonRun
 
