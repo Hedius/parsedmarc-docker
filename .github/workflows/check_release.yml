@@ -20,8 +20,8 @@ jobs:
         if [[ "$LATEST_RELEASE" != "$THIS_RELEASE" ]]; then
           curl \
             -X POST \
-            -H "Authorization: token ${{ secrets.REPO_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/releases" \
-            -d  "{ \"tag_name\": \"$LATEST_RELEASE\", \"name\": \"$LATEST_RELEASE\", \"body\": \"\", \"draft\": false, \"prerelease\": false }"
+            -d  "{ \"tag_name\": \"$LATEST_RELEASE\", \"name\": \"$LATEST_RELEASE\", \"body\": \"automatic update\", \"draft\": false, \"prerelease\": false }"
         fi
