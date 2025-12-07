@@ -2,7 +2,7 @@ name: Check for External Repo Release
 
 on:
   schedule:
-    - cron: '30 * * * *'
+    - cron: '30 */12 * * *'
   push: {branches: ["master", "main"]}
 
 jobs:
