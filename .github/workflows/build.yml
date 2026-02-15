@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - Dockerfile
+    tags:
+      - '*'
   release:
     types: [published]
 
